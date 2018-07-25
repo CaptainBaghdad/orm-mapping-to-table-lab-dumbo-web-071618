@@ -9,6 +9,7 @@ class Student
   def  initialize(name,grades)
     @name = name
     @grade = grade 
+    @id = id
     
     
   end 
