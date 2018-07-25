@@ -49,7 +49,7 @@ class Student
     ;"
     DB[:conn].execute(sql, self.name, self.grade)
 
-    @id = DB[:conn].execute('SELECT * FROM students').flatten.last
+    @id = DB[:conn].execute('SELECT * FROM students').flatten.first
   end
   
   
