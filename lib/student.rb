@@ -38,7 +38,7 @@ class Student
      puts "This is the name #{self.name}"
      puts "This is the name #{self.grade}"
      puts "This is the name #{self.id}"
-     puts "thhis is the sql id #{sql_id[1]}"
+     puts "thhis is the sql id #{sql_id}"
   end 
   
   
