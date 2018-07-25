@@ -33,11 +33,12 @@ class Student
     #puts "this is the data  #{a}"
     
     
-     sql_id = "SELECT name FROM students WHERE id=?"
+     sql_id = "SELECT * FROM students WHERE id=?"
      DB[:conn].execute(sql_id, self.name)
      puts "This is the name #{self.name}"
      puts "This is the name #{self.grade}"
      puts "This is the name #{self.id}"
+     puts "thhis is the sql id #{sql_id[1]}"
   end 
   
   
