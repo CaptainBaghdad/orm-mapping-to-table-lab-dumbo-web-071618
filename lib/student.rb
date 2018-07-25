@@ -53,7 +53,10 @@ class Student
   end
   
   
-  def self.create(attributes)
+  def self.create(name:, grade:)
+    student = Student.new(name,grade)
+    student.save
+    return student
     
     
   end 
