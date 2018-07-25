@@ -6,11 +6,11 @@ class Student
   attr_accessor   :name, :grade
   attr_reader :id
   
-  def  initialize(attributes)
-    attributes.each do |k,v|
-       
-      
-    end 
+  def  initialize(name,grades)
+    @name = name
+    @grade = grade 
+    
+    
   end 
   
   def self.create_table
