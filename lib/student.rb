@@ -28,19 +28,23 @@ class Student
   end 
   
   
-  def save
-    sql  =  "INSERT INTO students(name,grade) VALUES(?,?);"
-    DB[:conn].execute(sql, self.name, self.grade)
+ #def save
+    #sql  =  "INSERT INTO students(name,grade) VALUES(?,?);"
+    #DB[:conn].execute(sql, self.name, self.grade)
     #puts "this is the data  #{a}"
     
     
-     sql_id = "SELECT id FROM students WHERE id=?;"
-    ans = DB[:conn].execute(sql_id, self.id)
-     puts "This is the name #{self.name}"
-     puts "This is the name #{self.grade}"
-     puts "This is the name #{self.id}"
-     puts "thhis is the sql id #{ans}"
-  end 
+     #sql_id = "SELECT id FROM students WHERE id=?;"
+    #ans = DB[:conn].execute(sql_id, self.id)
+    # puts "This is the name #{self.name}"
+     #puts "This is the name #{self.grade}"
+    # puts "This is the name #{self.id}"
+    #puts "thhis is the sql id #{ans}"
+  #end
+  
+  
+  
+  
   
   
 end
