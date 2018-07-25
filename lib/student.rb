@@ -49,7 +49,7 @@ class Student
     SQL
     DB[:conn].execute(sql, self.name, self.grade)
 
-    @id = DB[:conn].execute('SELECT * FROM students WHERE id=?', ).flatten.first
+    @id = DB[:conn].execute('SELECT * FROM students WHERE id=?',self.id ).flatten.first
   end
   
   
