@@ -43,13 +43,13 @@ class Student
   #end
   
   def save
-    sql = <<-SQL
-      INSERT INTO students (name, grade)
+    sql = 
+      "INSERT INTO students (name, grade)
       VALUES (?, ?)
-    SQL
+    ;"
     DB[:conn].execute(sql, self.name, self.grade)
 
-    @id = DB[:conn].execute('SELECT * FROM students WHERE id=?',self.id ).flatten.first
+    @id = DB[:conn].execute('SELECT * FROM students WHERE id=?',id ).flatten.first
   end
   
   
