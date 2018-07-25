@@ -42,7 +42,15 @@ class Student
     #puts "thhis is the sql id #{ans}"
   #end
   
-  
+  def save
+    sql = <<-SQL
+      INSERT INTO students (name, grade)
+      VALUES (?, ?)
+    SQL
+    DB[:conn].execute(sql, self.name, self.grade)
+
+    @id = DB[:conn].execute('SELECT * FROM students WHERE id=?', ).flatten.first
+  end
   
   
   
